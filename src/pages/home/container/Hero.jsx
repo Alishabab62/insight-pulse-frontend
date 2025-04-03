@@ -11,8 +11,7 @@ const Hero = () => {
           Read the most interesting articles
         </h1>
         <p className="text-dark-light mt-4 text-center md:text-xl lg:text-base xl:text-xl lg:text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua
+          Stay ahead in tech with the latest insights, trends, and tutorials. Explore innovations and level up your skills with us!
         </p>
         <Search className="mt-10 lg:mt-6 xl:mt-10" />
         <div className="flex mt-4 flex-col lg:flex-row lg:items-start lg:flex-nowrap lg:gap-x-4 lg:mt-7">
