@@ -4,7 +4,6 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
-import { images } from "../constants";
 import logo from "../assets/logo.jpg"
 import { logout } from "../store/actions/user";
 

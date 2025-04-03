@@ -1,7 +1,7 @@
 import { images, stables } from "../../../../constants";
 import { deletePost, getAllPosts } from "../../../../services/index/posts";
-import Pagination from "../../../../components/Pagination";
-import { toast } from "react-hot-toast";
+// import Pagination from "../../../../components/Pagination";
+// import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { useDataTable } from "../../../../hooks/useDataTable";
 import DataTable from "../../components/DataTable";
@@ -15,7 +15,7 @@ const ManagePosts = () => {
     isLoading,
     isFetching,
     isLoadingDeleteData,
-    queryClient,
+    // queryClient,
     searchKeywordHandler,
     submitSearchKeywordHandler,
     deleteDataHandler,

@@ -40,7 +40,7 @@ const Comments = () => {
 
   const {
     mutate: mutateUpdateCommentCheck,
-    isLoading: isLoadingUpdateCommentCheck,
+    // isLoading: isLoadingUpdateCommentCheck,
   } = useMutation({
     mutationFn: ({ token, check, commentId }) => {
       return updateComment({ token, check, commentId });
