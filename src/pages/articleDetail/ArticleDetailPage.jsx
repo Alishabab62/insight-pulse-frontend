@@ -5,7 +5,7 @@ import BreadCrumbs from "../../components/BreadCrumbs";
 import CommentsContainer from "../../components/comments/CommentsContainer";
 import MainLayout from "../../components/MainLayout";
 import SocialShareButtons from "../../components/SocialShareButtons";
-import { images, stables } from "../../constants";
+import { images } from "../../constants";
 import SuggestedPosts from "./container/SuggestedPosts";
 import { useQuery } from "@tanstack/react-query";
 import { getAllPosts, getSinglePost } from "../../services/index/posts";
@@ -14,6 +14,7 @@ import ErrorMessage from "../../components/ErrorMessage";
 import { useSelector } from "react-redux";
 import parseJsonToHtml from "../../utils/parseJsonToHtml";
 import Editor from "../../components/editor/Editor";
+import { Helmet } from "react-helmet-async";
 
 const ArticleDetailPage = () => {
   const { slug } = useParams();
@@ -45,6 +46,9 @@ const ArticleDetailPage = () => {
 
   return (
     <MainLayout>
+        <Helmet>
+        <title>{data?.title}</title>
+      </Helmet>
       {isLoading ? (
         <ArticleDetailSkeleton />
       ) : isError ? (
@@ -57,7 +61,7 @@ const ArticleDetailPage = () => {
               className="rounded-xl w-full"
               src={
                 data?.photo
-                  ? stables.UPLOAD_FOLDER_BASE_URL + data?.photo
+                  ? "http://localhost:5000/uploads/" + data?.photo
                   : images.samplePostImage
               }
               alt={data?.title}
