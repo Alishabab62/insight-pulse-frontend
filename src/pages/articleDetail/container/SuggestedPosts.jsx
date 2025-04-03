@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { images, stables } from "../../../constants";
+import { images } from "../../../constants";
 
 const SuggestedPosts = ({ className, header, posts = [], tags }) => {
   return (
@@ -20,7 +20,7 @@ const SuggestedPosts = ({ className, header, posts = [], tags }) => {
               className="aspect-square object-cover rounded-lg w-1/5"
               src={
                 item?.photo
-                  ? stables.UPLOAD_FOLDER_BASE_URL + item?.photo
+                  ? "http://localhost:5000/uploads/" + item?.photo
                   : images.samplePostImage
               }
               alt={item.title}
