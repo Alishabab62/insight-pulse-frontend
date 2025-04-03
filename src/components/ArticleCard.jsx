@@ -14,7 +14,7 @@ const ArticleCard = ({ post, className }) => {
         <img
           src={
             post.photo
-              ? stables.UPLOAD_FOLDER_BASE_URL + post.photo
+              ? "http://localhost:5000/uploads/" + post.photo
               : images.samplePostImage
           }
           alt="title"
