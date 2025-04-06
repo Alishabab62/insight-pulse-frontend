@@ -1,4 +1,4 @@
-import { images, stables } from "../../../../constants";
+import { images } from "../../../../constants";
 import { deletePost, getAllPosts } from "../../../../services/index/posts";
 // import Pagination from "../../../../components/Pagination";
 // import { toast } from "react-hot-toast";
@@ -58,7 +58,7 @@ const ManagePosts = () => {
                   <img
                     src={
                       post?.photo
-                        ? stables.UPLOAD_FOLDER_BASE_URL + post?.photo
+                        ? "http://localhost:5000/uploads/" + post?.photo
                         : images.samplePostImage
                     }
                     alt={post.title}
