@@ -133,7 +133,7 @@ const EditPost = () => {
                 />
               ) : initialPhoto ? (
                 <img
-                  src={stables.UPLOAD_FOLDER_BASE_URL + data?.photo}
+                  src={"http://localhost:5000/uploads/"+ data?.photo}
                   alt={data?.title}
                   className="rounded-xl w-full"
                 />
